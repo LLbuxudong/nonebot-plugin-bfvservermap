@@ -22,12 +22,12 @@ from nonebot.plugin import PluginMetadata
 
 __plugin_meta__ = PluginMetadata(
     name="bfvservermap",
-    description="查询服务器信息",
-    usage="服务器信息 <服务器名称>",
+    description="查询服务器地图信息",
+    usage="map<服务器名称>",
     homepage="https://github.com/LLbuxudong/nonebot-plugin-bfvservermap",
 )
 
-servermessage = on_command("server", aliases={"服务器信息"}, priority=5, block=True)
+servermessage = on_command("map", aliases={"地图,map="}, priority=5, block=True)
 
 # 异步请求 JSON 数据
 async def fetch_json(session: aiohttp.ClientSession, url: str, timeout: int = 20) -> Optional[Dict[str, Any]]:
