@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nonebot-plugin-bfvservermap"
-version = "0.1.4"
+version = "0.1.5"
 description = "A onebot plugin for querying bfv server maps"
 authors = ["llbuxudong 3513392931@qq.com"]
 license = "MIT"
