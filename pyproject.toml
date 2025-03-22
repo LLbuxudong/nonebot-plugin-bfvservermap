@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "nonebot-plugin-bfvserversmap"
+name = "nonebot-plugin-bfvservermap"
 version = "0.1.4"
 description = "A onebot plugin for querying bfv server maps"
 authors = ["llbuxudong 3513392931@qq.com"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "nonebot-plugin-bfvserversmap"}]
+packages = [{include = "nonebot-plugin-bfvservermap"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
