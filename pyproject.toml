@@ -5,7 +5,7 @@ description = "A onebot plugin for querying bfv server maps"
 authors = ["llbuxudong 3513392931@qq.com"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "nonebot-plugin-bfvserversmap"}]
+packages = [{include = "nonebot_plugin_bfvserversmap"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
