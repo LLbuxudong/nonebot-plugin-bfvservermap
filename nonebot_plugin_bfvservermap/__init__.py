@@ -6,7 +6,6 @@ from nonebot.adapters import Message
 from nonebot.adapters.onebot.v11 import Bot, GroupMessageEvent, MessageSegment
 from nonebot.params import CommandArg
 import httpx  
-import json
 from jinja2 import  Environment, FileSystemLoader
 import os
 import base64
@@ -93,6 +92,7 @@ async def handle_server(bot: Bot, event: GroupMessageEvent, arg: Message = Comma
                 owner_name = serverdata_detail.get('owner', {}).get('name', 'N/A')
                 teams = serverdata_detail.get('teams', {})
                 rotation_info = serverdata_detail.get('rotation', [])
+                description = serverdata_detail.get('description', '无描述')
 
                 # 获取背景图片的绝对路径
                 template_path = os.path.dirname(__file__)  # 获取当前文件所在目录
@@ -117,6 +117,7 @@ async def handle_server(bot: Bot, event: GroupMessageEvent, arg: Message = Comma
                     "owner_name": owner_name,
                     "teams": teams,
                     "rotation_info": rotation_info,
+                    "description": description,
                     "background_image": f"data:image/jpeg;base64,{background_image_base64}"  # 传递Base64编码的背景图片
                 }
 
