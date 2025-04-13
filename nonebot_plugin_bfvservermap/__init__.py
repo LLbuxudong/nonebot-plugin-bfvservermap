@@ -18,7 +18,9 @@ __plugin_meta__ = PluginMetadata(
     description="查询服务器地图信息",
     usage="map<服务器名称>",
     homepage="https://github.com/LLbuxudong/nonebot-plugin-bfvservermap",
-)
+    type="application",
+    supported_adapters={"~onebot.v11"}
+    )
 
 servermessage = on_command("map", aliases={"地图,map="}, priority=5, block=True)
 
